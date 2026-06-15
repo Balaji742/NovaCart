@@ -83,6 +83,18 @@
   .image-container {
     height: 550px !important;
   }
+
+  .col-lg-6.p-5 {
+    padding: 1.5rem !important;
+  }
+
+  .overlay-text h6:nth-child(2) {
+    font-size: 1.2rem !important;
+  }
+
+  .overlay-text small {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width : 768px) {
@@ -116,5 +128,19 @@
   .navbar-collapse .form-select,
   .navbar-collapse form {
     width: 100%;
+  }
+
+   .image-container {
+    height: 300px;
+  }
+
+  .overlay-text {
+    left: 15px !important;
+    right: 15px !important;
+    bottom: 20px !important;
+  }
+
+  .overlay-text h6:nth-child(2) {
+    font-size: 1.5rem !important;
   }
 }

@@ -25,7 +25,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="card shadow-sm mx-auto" style={{ maxWidth: "1000px", height: "650px", overflow: "hidden" }}>
+            <div className="card shadow-sm mx-auto" style={{ maxWidth: "1000px", minHeight: "650px"}}>
                 <div className="row g-0 h-100">
 
                     <div className="col-lg-6 position-relative image-container">
@@ -55,7 +55,7 @@ const Login = () => {
 
                         </div>
                         <button className="btn btn-dark w-100 mt-3" onClick={loginHandler}>Login</button>
-                        <p className='mt-5 ms-5 ps-5'>Don't have account?<Link to="/registerpage" >Register</Link></p>
+                        <p className='mt-4 text-center '>Don't have account?<Link to="/registerpage" cl>Register</Link></p>
                     </div>
                 </div>
             </div>
