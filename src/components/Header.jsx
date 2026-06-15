@@ -54,7 +54,7 @@ const Header = ({ setShowCart }) => {
 
     const logoutHandler = async () => {
         setLoggingOut(true);
-        dispatch(clearCart());       
+        dispatch(clearCart());
         await signOut(auth);
         setLoggingOut(false);
         toast.success("Logout successful");
@@ -76,53 +76,56 @@ const Header = ({ setShowCart }) => {
                             <Link to="/aboutpage" className="nav-link active" aria-current="page"  >About</Link>
                         </li>
                     </ul>
-                    <form className="d-flex">
-                        {
-                            showSearch && (
-                                <input className="form-control me-2" type="search" placeholder="Fashion" aria-label="Search" onChange={(e) => dispatch(setSearch(e.target.value))} />
-                            )
-                        }
 
-                        <button className='btn btn-light border-secondary me-2 bg-white' type='button' onClick={() => setShowSearch(!showSearch)}><CiSearch className='fs-4' /></button>
+                    <div className="d-flex flex-column flex-lg-row gap-2 align-items-lg-center">
+                        <form className="d-flex">
+                            {
+                                showSearch && (
+                                    <input className="form-control me-2" type="search" placeholder="Fashion" aria-label="Search" onChange={(e) => dispatch(setSearch(e.target.value))} />
+                                )
+                            }
 
-                    </form>
-                    <select className='form-select w-auto me-2' onChange={(e) => dispatch(setCategory(e.target.value))}>
-                        <option value="">All Categories</option>
-                        <option value="electronics">Electronics</option>
-                        <option value="fashion">Fashion</option>
-                        <option value="sports">Sports</option>
-                        <option value="outdoor">Outdoor</option>
-                        <option value="home">Home</option>
-                    </select>
+                            <button className='btn btn-light border-secondary me-2 bg-white' type='button' onClick={() => setShowSearch(!showSearch)}><CiSearch className='fs-4' /></button>
 
-                    {user ? (
-                        <li className="nav-item dropdown list-unstyled me-3">
-                            <button
-                                className="btn btn-outline-dark"
-                                data-bs-toggle="dropdown"><IoReorderFourOutline className='fs-4 ' />
-                            </button>
-                            <ul className="dropdown-menu">
-                                <li>
-                                    <Link to="/profilepage" className='dropdown-item' ><CgProfile className='bg-black text-light rounded-circle fs-4'/> Profile</Link>
-                                </li>
-                                <li>
-                                    <Link to="/orderspage" className='dropdown-item' >Orders</Link>
-                                </li>
-                                <li>
-                                    <button className="dropdown-item" onClick={logoutHandler}>Logout <RiLogoutBoxRFill className='fs-4' />
-</button>
-                                </li>
-                            </ul>
-                        </li>
-                    ) : (
-                        <>
-                            <li className="nav-item me-2 list-unstyled">
-                                <Link to="/loginpage" className="btn btn-outline-primary">Login</Link>
+                        </form>
+                        <select className='form-select w-auto me-2' onChange={(e) => dispatch(setCategory(e.target.value))}>
+                            <option value="">All Categories</option>
+                            <option value="beauty">Beauty</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="home">Home</option>
+                            <option value="outdoor">Outdoor</option>
+                            <option value="sports">Sports</option>
+                        </select>
+
+                        {user ? (
+                            <li className="dropdown ">
+                                <button
+                                    className="btn btn-outline-dark"
+                                    data-bs-toggle="dropdown"><IoReorderFourOutline className='fs-4 ' />
+                                </button>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <Link to="/profilepage" className='dropdown-item' ><CgProfile className='bg-black text-light rounded-circle fs-4' /> Profile</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/orderspage" className='dropdown-item' >Orders</Link>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item" onClick={logoutHandler}>Logout <RiLogoutBoxRFill className='fs-4' />
+                                        </button>
+                                    </li>
+                                </ul>
                             </li>
-                        </>
-                    )}
-                    <Link to="/cart" className="btn btn-dark me-2 position-relative" type="button" onClick={() => { setShowCart(true) }}><FiShoppingCart /> {cartStore.length > 0 && (<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalItems}</span>)}</Link>
-
+                        ) : (
+                            <>
+                                <li className="nav-item me-2 list-unstyled">
+                                    <Link to="/loginpage" className="btn btn-outline-primary">Login</Link>
+                                </li>
+                            </>
+                        )}
+                        <Link to="/cart" className="btn btn-dark me-2 position-relative" type="button" onClick={() => { setShowCart(true) }}><FiShoppingCart /> {cartStore.length > 0 && (<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalItems}</span>)}</Link>
+                    </div>
                 </div>
             </div>
         </nav>

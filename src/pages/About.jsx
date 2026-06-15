@@ -15,17 +15,17 @@ const About = () => {
             <div className='container-fluid'>
                 <div className='row d-flex justify-content-around mt-5'>
                     <div className='col-lg-3 card'>
-                        <HiOutlineBolt className='border fs-3 p-1 mt-2 mb-2 text-success bg-success-subtle rounded'/>
+                        <HiOutlineBolt className='border fs-3 p-1 mt-2 mb-2 text-success bg-success-subtle rounded' />
                         <h6 className='fw-bold'>Fast Catalog</h6>
                         <small className='mb-2'>products are loaded from JSON and rendered with<br />efficient search, filter, sort, and pagination controls.</small>
                     </div>
                     <div className='col-lg-3 card'>
-                        <IoBagCheckOutline  className='border fs-3 p-1 mb-2 mt-2 text-success bg-success-subtle rounded'/>
+                        <IoBagCheckOutline className='border fs-3 p-1 mb-2 mt-2 text-success bg-success-subtle rounded' />
                         <h6 className='fw-bold'>Persistent Cart</h6>
                         <small className='mb-2'>Cart items and quantities are saved in browser<br />Storage, so the shopping flow survives refreshs.</small>
                     </div>
                     <div className='col-lg-3 card'>
-                        <BsShieldLock className='border fs-3 p-1 mb-2 mt-2 text-success bg-success-subtle rounded'/>
+                        <BsShieldLock className='border fs-3 p-1 mb-2 mt-2 text-success bg-success-subtle rounded' />
                         <h6 className='fw-bold'>Account Flow</h6>
                         <small className='mb-2'>Registration and login include validation, duplicate<br />checks, password hashing, and session handling.</small>
                     </div>
@@ -33,23 +33,29 @@ const About = () => {
             </div>
 
             <div className='container pt-5 mb-5'>
-                <div className='row '>
-                    <div className='d-flex justify-content-around pt-3 border rounded-2 bg-secondary-subtle'>
-                        <div>
+                <div className='row'>
+                    <div className='d-flex flex-column flex-md-row justify-content-between align-items-start border rounded-2 bg-secondary-subtle p-4'>
+
+                        <div className='mb-4 mb-md-0'>
                             <h3>Built with practical standards</h3>
-                            <small className='text-muted mb-'>The app keeps concerns seperated across markup, styling, catalog logic, and<br/>authentication logic. it is esay to host as a static site and easy to connect to real <br/>backend later.</small>
+                            <small className='text-muted'>
+                                The app keeps concerns separated across markup, styling,
+                                catalog logic, and authentication logic. It is easy to host
+                                as a static site and easy to connect to a real backend later.
+                            </small>
                         </div>
-                        <div className='pt-3'>
-                            <span className='border border-black bg-white rounded-5 p-2  me-3 '>HTML5</span>
-                            <span className='border border-black bg-white rounded-5 p-2 me-3 '>CSS3</span>
-                            <span className='border border-black bg-white rounded-5 p-2 me-3 '>Bootstrap5</span>
-                            <span className='border border-black bg-white rounded-5 p-2 me-3 '>JavaScript</span>
-                            <span className='border border-black bg-white rounded-5 p-2'>JSON API Ready</span><br/><br/>
-                            <span className='border border-black bg-white rounded-5 p-2 mt-3'>LocalStorage</span>
+
+                        <div className='d-flex flex-wrap gap-2'>
+                            <span className='border border-black bg-white rounded-pill px-3 py-2'>HTML5</span>
+                            <span className='border border-black bg-white rounded-pill px-3 py-2'>CSS3</span>
+                            <span className='border border-black bg-white rounded-pill px-3 py-2'>Bootstrap5</span>
+                            <span className='border border-black bg-white rounded-pill px-3 py-2'>JavaScript</span>
+                            <span className='border border-black bg-white rounded-pill px-3 py-2'>JSON API Ready</span>
+                            <span className='border border-black bg-white rounded-pill px-3 py-2'>LocalStorage</span>
                         </div>
+
                     </div>
                 </div>
-
             </div>
         </div>
 
