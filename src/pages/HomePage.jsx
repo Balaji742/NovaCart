@@ -81,16 +81,16 @@ const HomePage = () => {
                     backgroundImage: "url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1800&q=80')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    minHeight: "400px"
+                    minHeight: "400px",
                 }}
             >
-                <div className='ms-5'>
+                <div className='container py-5'>
                     <h6 className='text-info fw-bolder'>NEW COLLECTION</h6>
                     <h1 className='display-5 fw-bold'>Shop reliable products for <br /> every work and life.</h1>
                     <p className='lead'>Curated electronics, fashion, home goods and accessories with a fast local cart<br /> experience</p>
                 </div>
 
-                <div className='glass-card d-flex flex-row ms-5 mt-5 bg-white bg-opacity-25 border border-light rounded text-white fw-bold fs-6' style={{ width: "35%", WebkitBackdropFilter: "blur(12px)" }}>
+                <div className='glass-card d-flex flex-column flex-sm-row mt-4 bg-white bg-opacity-25 border border-light rounded text-white fw-bold fs-6' style={{ width: "100%",maxWidth:"500px", WebkitBackdropFilter: "blur(12px)" }}>
                     <div className='ps-4 flex-fill '>
                         <h2>50</h2>
                         <p>Products</p>
@@ -105,7 +105,8 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className='row' style={{ margin: "50px 90px" }}>
+            <div className='container my-5'>
+            <div className='row'>
                 <h2>Products</h2>
                 <div className='d-flex justify-content-between'>
                     <p className='mb-4'>Showing {firstIndex + 1}-{lastIndex} of {products.length} <br /> products</p>
@@ -119,7 +120,7 @@ const HomePage = () => {
                 </div>
                 {
                     filteredProducts.length > 0 ? sortedProducts.map((prod, i) => (
-                        <div className='col-lg-3 mb-4' key={i}>
+                        <div className='col-12 col-sm-6 col-lg-4 col-xl-3 mb-4' key={i}>
                             <div className='card'>
                                 <img src={prod.image} alt={prod.title} />
                                 <div className='d-flex justify-content-between me-3 ms-3 mt-3'>
@@ -136,6 +137,7 @@ const HomePage = () => {
                         </div>
                     )) : <h2 className='text-center'>loading....</h2>
                 }
+            </div>
             </div>
 
             <div className='text-center mb-5'>

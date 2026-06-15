@@ -64,7 +64,7 @@ const OrdersPage = () => {
                     <div key={i}>
                       <div>
                         <div className='d-flex m-2'>
-                          <img src={item.image} alt="" width="5%" className='rounded-2 me-4' />
+                          <img src={item.image} alt="" style={{maxWidth:"80px"}} className='rounded-2 img-fluid me-4' />
                           <h5 className='mt-2 me-5'>{item.name}</h5>
                           <h5 className='mt-2'>Qty: {item.quantity}</h5>
                         </div>

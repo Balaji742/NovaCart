@@ -87,7 +87,7 @@ const Cart = ({ showCart, setShowCart }) => {
                 {
                     cartStore && cartStore.length > 0 ? cartStore.map((cart, i) => (
                         <div className='row border-bottom m-2 cart-items h-50' key={i}>
-                            <div className='col-lg-8 d-flex mb-1'>
+                            <div className='col-12 d-flex flex-column flex-sm-row mb-2'>
                                 <img src={cart.image} alt="" width="50%" height="70px" className='rounded-4' />
                                 <div className='ms-3'>
                                     <h6 className='fw-bold mb-1'>{cart.name}</h6>

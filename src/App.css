@@ -1,51 +1,108 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    scrollbar-width: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
 }
 
-.cart-footer{
-    position: sticky;
-    bottom: 0;
-    background: white;
+
+
+.cart-footer {
+  position: sticky;
+  bottom: 0;
+  background: white;
 }
 
-.image-container{
+.image-container {
   position: relative;
   /* height: 650px; */
   overflow: hidden;
   border-radius: 10px 0 0 10px;
 }
 
-.image-container img{
+.image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.image-container::after{
+.image-container::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  box-shadow: inset 0 -150px 100px rgba(0,0,0,0.7);
+  box-shadow: inset 0 -150px 100px rgba(0, 0, 0, 0.7);
 }
 
-.overlay-text{
+.overlay-text {
   position: absolute;
   bottom: 40px;
   left: 30px;
   right: 30px;
   color: white;
   z-index: 1;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-.card{
+.card {
   overflow: hidden;
 }
 
-.cart-sidebar{
-  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+.cart-sidebar {
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width : 576px) {
+  .overlay-text {
+    left: 15px !important;
+    right: 20px !important;
+    bottom: 20px !important;
+    top: 10px !important;
+  }
+
+  .overlay-text h1 {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .overlay-text p {
+    font-size: 1.1rem !important;
+  }
+
+  .glass-card {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin-top: 20px !important;
+  }
+
+  .glass-card .border-start {
+    border-left: none !important;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+  }
+
+  .image-container {
+    height: 600px !important;
+  }
+}
+
+@media (max-width : 768px) {
+  .cart-sidebar {
+    width: 100% !important;
+  }
+
+  .navbar .form-select {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+
+  .overlay-text {
+    left: 15px;
+    right: 15px;
+    bottom: 20px;
+    /* top: 10px; */
+  }
+
+  .overlay-text h1 {
+    font-size: 1.8rem;
+  }
 }
