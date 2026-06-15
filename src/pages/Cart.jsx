@@ -78,36 +78,36 @@ const Cart = ({ showCart, setShowCart }) => {
             >
                 <div className='d-flex justify-content-between m-3 border-bottom  card-header'>
                     <h3>Shopping Cart</h3>
-                    <button className='btn-close' onClick={() =>{ setShowCart(false);
-                        navigate("/")}}> 
-                         </button>
+                    <button className='btn-close' onClick={() => {
+                        setShowCart(false);
+                        navigate("/")
+                    }}>
+                    </button>
                     <p>{cartStore.reduce((total, item) => total + item.quantity, 0)} items</p>
                 </div>
 
                 {
                     cartStore && cartStore.length > 0 ? cartStore.map((cart, i) => (
-                        <div className='row border-bottom m-2 cart-items h-50' key={i}>
-                            <div className='col-12 d-flex flex-column flex-sm-row mb-2'>
-                                <img src={cart.image} alt="" width="50%" height="70px" className='rounded-4' />
-                                <div className='ms-3'>
+                        <div className='border-bottom p-3' key={i}>
+                            <div className='d-flex align-items-center gap-3 flex-wrap'>
+                                <img src={cart.image} alt="" style={{ width: "50px", height: "50px", objectFit: "cover", borderRadius: "8px" }} />
+                                <div className='flex-grow-1'>
                                     <h6 className='fw-bold mb-1'>{cart.name}</h6>
-                                    <small className='text-muted fs-5'>${cart.price} each</small>
+                                    <small className='text-muted'>${cart.price} eachsdfg</small>
 
                                 </div>
-                                <div className=' px-2 py-1 d-flex flex-column'>
+                                <div className='text-center'>
                                     <HiMinusSmall className='fs-4 ms-1' onClick={() => dispatch(decreaseQty(cart.id))} />
 
 
                                     <h5 className='ms-2'>{cart.quantity}</h5>
                                     <HiOutlinePlusSmall className='fs-3 me-1' onClick={() => dispatch(increaseQty(cart.id))} />
-
-
                                 </div>
                             </div>
-                            <div className='col-4 text-end'>
+                            <div className='text-end'>
                                 <FaTrashAlt className='text-danger fs-5' onClick={() => trashHandler(cart.id)} />
 
-                                <h6 className='fw-bold fs-5 mt-5'>${cart.price * cart.quantity}</h6>
+                                <h6 className='fw-bold'>${cart.price * cart.quantity}</h6>
                             </div>
                         </div>
                     )) : <></>
@@ -115,26 +115,27 @@ const Cart = ({ showCart, setShowCart }) => {
 
                 {
                     cartStore.length > 0 && (
-                        <div className='cart-footer border-top'>
-                            <div className='d-flex justify-content-between me-4 ms-4 '>
+                        <div className='cart-footer border-top pt-3'>
+                            <div className='d-flex justify-content-between'>
                                 <p className='text-muted'>Subtotal</p>
                                 <h6>${totalPrice.toFixed(2)}</h6>
                             </div>
-                            <div className='d-flex justify-content-between me-4 ms-4'>
+                            <div className='d-flex justify-content-between'>
                                 <p className='text-muted'>Estimated shipping</p>
                                 <h6>${shipping.toFixed(2)}</h6>
                             </div>
-                            <div className='d-flex justify-content-between me-4 ms-4 '>
+                            <div className='d-flex justify-content-between fs-5'>
                                 <h6 className=''>Total</h6>
                                 {
                                     totalPrice && <h4>${total.toFixed(2)}</h4>
                                 }
                             </div>
 
-                            <button className='btn btn-outline-danger  px-4 py-2 rounded w-25  d-inline-block text-center fw-bold me-5 ms-5 text-nowrap' onClick={() => { dispatch(clearCart()), toast.success("cart is cleared") }}>Clear cart</button>
-                            <button className='btn btn-outline-success  py-2 rounded w-25  d-inline-block text-center fw-bold text-nowrap' onClick={placeOrder}>Place Order</button>
-                            <button className='btn bg-black px-4 py-2 rounded w-75 mt-1 d-inline-block text-center text-white fw-bold me- ms-4'>Checkout</button>
-
+                            <div className='d-grid gap-2 mt-3'>
+                                <button className='btn btn-outline-danger rounded' onClick={() => { dispatch(clearCart()), toast.success("cart is cleared") }}>Clear cart</button>
+                                <button className='btn btn-outline-success' onClick={placeOrder}>Place Order</button>
+                                <button className='btn bg-black'>Checkout</button>
+                            </div>
 
                         </div>
                     )
