@@ -25,7 +25,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="card shadow-sm mx-auto" style={{ maxWidth: "1000px", minHeight: "650px"}}>
+            <div className="card shadow-sm mx-auto" style={{ maxWidth: "1000px", minHeight: "50px"}}>
                 <div className="row g-0">
 
                     <div className="col-lg-6 position-relative image-container">
