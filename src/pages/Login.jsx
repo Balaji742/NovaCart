@@ -26,7 +26,7 @@ const Login = () => {
     return (
         <div>
             <div className="card shadow-sm mx-auto" style={{ maxWidth: "1000px", minHeight: "650px"}}>
-                <div className="row g-0 h-100">
+                <div className="row g-0">
 
                     <div className="col-lg-6 position-relative image-container">
                         <img
@@ -35,7 +35,7 @@ const Login = () => {
                             className="h-100 w-100"
                             style={{ objectFit: "cover" }}
                         />
-                        <div className='ms-4 overlay-text' style={{ bottom: "40px", left: "30px", right: "30px" }}>
+                        <div className='overlay-text'>
                             <h6 className='text-info fw-bolder'>WELCOME BACK</h6>
                             <h6 className='fw-bold fs-4 text-white'>Access your cart and<br />continue shopping faster.</h6>
                             <small className='text-white'>Your demo account stored locally in this browser for<br />portfolio and learning use.</small>

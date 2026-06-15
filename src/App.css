@@ -54,10 +54,14 @@
 
 @media (max-width : 576px) {
   .overlay-text {
-    left: 15px !important;
-    right: 20px !important;
-    bottom: 20px !important;
-    top: 10px !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    top: 50% !important;
+    position:absolute;
+    transform: translate(-50%, -50%) !important;
+    width: 90%;
+    text-align: center;
   }
 
   .overlay-text h1 {
@@ -82,18 +86,27 @@
 
   .image-container {
     height: 550px !important;
+    position: relative;
   }
 
   .col-lg-6.p-5 {
     padding: 1.5rem !important;
   }
 
-  .overlay-text h6:nth-child(2) {
+  .overlay-text h6:first-child{
     font-size: 1.2rem !important;
+    margin-bottom: 15px;
+  }
+
+  .overlay-text h6:nth-child(2) {
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
   }
 
   .overlay-text small {
-    font-size: 0.8rem;
+    font-size: 1rem !important;
+    display: block;
+    margin-top: 15px;
   }
 }
 
