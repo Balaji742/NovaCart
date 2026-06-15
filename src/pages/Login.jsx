@@ -55,7 +55,7 @@ const Login = () => {
 
                         </div>
                         <button className="btn btn-dark w-100 mt-3" onClick={loginHandler}>Login</button>
-                        <p>Don't have account?<Link to="/registerpage" >Register</Link></p>
+                        <p className='mt-5 ms-5 ps-5'>Don't have account?<Link to="/registerpage" >Register</Link></p>
                     </div>
                 </div>
             </div>
