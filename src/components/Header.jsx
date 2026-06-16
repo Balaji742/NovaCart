@@ -100,9 +100,9 @@ const Header = ({ setShowCart }) => {
 
                         {
                             user ? (
-                                <li className="dropdown">
+                                <div className="dropdown me-2">
                                     <button
-                                        className="btn btn-outline-dark list-unstyled"
+                                        className="btn btn-outline-dark"
                                         data-bs-toggle="dropdown"><IoReorderFourOutline className='fs-4' />
                                     </button>
                                     <ul className="dropdown-menu">
@@ -117,13 +117,11 @@ const Header = ({ setShowCart }) => {
                                             </button>
                                         </li>
                                     </ul>
-                                </li>
+                                </div>
                             ) : (
-                                <>
-                                    <li className="nav-item me-2 list-unstyled">
-                                        <Link to="/loginpage" className="btn btn-outline-primary">Login</Link>
-                                    </li>
-                                </>
+                                <div className="me-2">
+                                    <Link to="/loginpage" className="btn btn-outline-primary">Login</Link>
+                                </div>
                             )}
                         <Link to="/cart" className="btn btn-dark me-2 position-relative" type="button" onClick={() => { setShowCart(true) }}><FiShoppingCart /> {cartStore.length > 0 && (<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalItems}</span>)}</Link>
                     </div>

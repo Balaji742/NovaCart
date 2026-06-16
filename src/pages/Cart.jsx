@@ -214,7 +214,7 @@ const Cart = ({ showCart, setShowCart }) => {
                                 Place Order
                             </button>
 
-                            <button className="btn btn-dark">
+                            <button className="btn btn-dark text-white">
                                 Checkout
                             </button>
                         </div>
