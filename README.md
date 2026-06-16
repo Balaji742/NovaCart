@@ -4,7 +4,7 @@ A modern React-based ecommerce application built for portfolio and learning purp
 
 ## 🚀 Live Demo
 
-nova-cart-zeta-three.vercel.app
+https://nova-cart-zeta-three.vercel.app
 
 ## 📌 Features
 
