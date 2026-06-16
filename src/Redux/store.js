@@ -28,9 +28,6 @@ export const store = configureStore({
         category: categoryReducer,
         search: searchReducer,
         cart: cartReducer,
-    },
-    preloadedState: {
-        cart: loadCart(),
     }
 });
 

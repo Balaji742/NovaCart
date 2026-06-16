@@ -38,8 +38,6 @@ const Header = ({ setShowCart }) => {
                     if (saved) {
                         const items = JSON.parse(saved);
                         dispatch(restoreCart(items));
-                    } else {
-                        dispatch(clearCart())
                     }
                 } catch (error) {
                     console.error("Failed to load cart", error);
