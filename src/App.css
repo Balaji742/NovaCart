@@ -59,7 +59,7 @@
     right: auto !important;
     bottom: auto !important;
     top: 50% !important;
-    position:absolute;
+    position: absolute;
     transform: translate(-50%, -50%) !important;
     width: 90%;
     text-align: center;
@@ -94,7 +94,7 @@
     padding: 1.5rem !important;
   }
 
-  .overlay-text h6:first-child{
+  .overlay-text h6:first-child {
     font-size: 1.2rem !important;
     margin-bottom: 15px;
   }
@@ -112,6 +112,19 @@
 
   .cart-sidebar {
     width: 100% !important;
+  }
+
+  .modal-dialog {
+    margin: 10px !important;
+  }
+
+  .modal-content {
+    border-radius: 12px;
+  }
+
+  .modal-body img {
+    width: 80px !important;
+    height: 80px !important;
   }
 }
 
@@ -148,7 +161,7 @@
     width: 100%;
   }
 
-   .image-container {
+  .image-container {
     height: 300px;
   }
 

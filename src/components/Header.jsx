@@ -98,32 +98,33 @@ const Header = ({ setShowCart }) => {
                             <option value="sports">Sports</option>
                         </select>
 
-                        {user ? (
-                            <li className="dropdown ">
-                                <button
-                                    className="btn btn-outline-dark"
-                                    data-bs-toggle="dropdown"><IoReorderFourOutline className='fs-4 ' />
-                                </button>
-                                <ul className="dropdown-menu">
-                                    <li>
-                                        <Link to="/profilepage" className='dropdown-item' ><CgProfile className='bg-black text-light rounded-circle fs-4' /> Profile</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/orderspage" className='dropdown-item' >Orders</Link>
-                                    </li>
-                                    <li>
-                                        <button className="dropdown-item" onClick={logoutHandler}>Logout <RiLogoutBoxRFill className='fs-4' />
-                                        </button>
-                                    </li>
-                                </ul>
-                            </li>
-                        ) : (
-                            <>
-                                <li className="nav-item me-2 list-unstyled">
-                                    <Link to="/loginpage" className="btn btn-outline-primary">Login</Link>
+                        {
+                            user ? (
+                                <li className="dropdown">
+                                    <button
+                                        className="btn btn-outline-dark list-unstyled"
+                                        data-bs-toggle="dropdown"><IoReorderFourOutline className='fs-4' />
+                                    </button>
+                                    <ul className="dropdown-menu">
+                                        <li>
+                                            <Link to="/profilepage" className='dropdown-item' ><CgProfile className='bg-black text-light rounded-circle fs-4' /> Profile</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/orderspage" className='dropdown-item' >Orders</Link>
+                                        </li>
+                                        <li>
+                                            <button className="dropdown-item" onClick={logoutHandler}>Logout <RiLogoutBoxRFill className='fs-4' />
+                                            </button>
+                                        </li>
+                                    </ul>
                                 </li>
-                            </>
-                        )}
+                            ) : (
+                                <>
+                                    <li className="nav-item me-2 list-unstyled">
+                                        <Link to="/loginpage" className="btn btn-outline-primary">Login</Link>
+                                    </li>
+                                </>
+                            )}
                         <Link to="/cart" className="btn btn-dark me-2 position-relative" type="button" onClick={() => { setShowCart(true) }}><FiShoppingCart /> {cartStore.length > 0 && (<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalItems}</span>)}</Link>
                     </div>
                 </div>

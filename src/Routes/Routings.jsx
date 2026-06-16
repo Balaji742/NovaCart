@@ -41,6 +41,7 @@ const Routings = () => {
             <ProfilePage />
           </ProtectedRoute>
         } />
+        {/* <Route path="/orders/:id" element={<OrderDetails />} /> */}
       </Routes>
     </div>
   )
